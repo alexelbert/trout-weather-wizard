@@ -1,0 +1,121 @@
+/* Import Google Font - 'Roboto' sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Roboto:wght@300&family=Source+Sans+3:wght@200&display=swap');
+
+/* Override default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F5F5F5;
+}
+
+h1 {
+    background-color: #65b891;
+    color: #00241b;
+    font-size: 1.75em;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+.weatherinfo {
+    width: 450px;
+}
+
+.weatherinfo input {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    margin: 10px 0 10px 0;
+    font-size: 1rem;
+    border-radius: 2px;
+    border: 1px solid #00241b;
+}
+
+.weatherinfo .seperation {
+    width: 100%;
+    height: 1px;
+    margin: 15px 0;
+    background: #4e878c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherinfo .seperation::before {
+    content: "or";
+    color: #00241b;
+    font-size: 1rem;
+    padding: 0 10px;
+    background: #F5F5F5;
+}
+
+.weatherinfo button {
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 1px;
+    border: 1px solid #00241b;
+    background: #65b891;
+    color: #00241b;
+}
+
+.weatherinfo .location-btn {
+    background: #b5ffe1;
+}
+
+.weatherdata {
+    width: 100%;
+}
+
+/* Making "today's weather appear beside search bars
+and adding some padding for looks */
+.currentweather {
+    display: flex;
+    justify-content: space-between;
+    background: #b5ffe1;
+    color: #00241b;
+    padding: 20px 40px 20px 20px;
+    
+}
+
+/* Spacing between the different parameters */
+.weatherdetails h4 {
+    margin-top: 10px;
+}
+
+/* specifying max-width so icon do not appear stretched */
+.icon img {
+    max-width: 128px;
+}
+
+.forecast {
+    margin: 20px 0
+}
+
+/* Creating some space between the forecast */
+.days {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.days .day-info {
+    color: #00241b;
+    background: #65b891;
+    list-style: none;
+    padding: 10px 20px;
+    width: calc(100% / 4);
+}
+
+.day-info img {
+    max-width: 60px;
+}
