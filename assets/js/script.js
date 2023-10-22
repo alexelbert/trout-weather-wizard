@@ -1,6 +1,24 @@
 let cityInput = document.getElementById('city-input')
 let searchButton = document.querySelector('.search-btn')
+let currentWeatherDiv = document.querySelector('.weatherdetails')
 
+
+
+function weatherCard() {
+    currentWeather = `<div class="weatherdetails">
+                    <h2>Weather in Alingsås right now</h2>
+                    <h4>Cloud cover: %</h4>
+                    <h4>Temperature: °C</h4>
+                    <h4>Wind: km/h</h4>
+                    <h4>Wind direction: °</h4>
+                    <h4>Sea pressure: hPa</h4>
+                    <h4>Precipitation: mm</h4>
+                </div>`
+    return currentWeather;
+}
+
+currentWeatherDiv.innerHTML = '';
+currentWeatherDiv.insertAdjacentHTML("beforeend", weatherCard())
 
 /**
  * Takes the values returned from geocoding API
@@ -17,8 +35,8 @@ function getWeather(name, latitude, longitude, timezone) {
     }
     return response.json();
     })
-    .then((data) => {
-        console.log(data);
+    .then((weatherData) => {
+        console.log(weatherData);
     })
     .catch(() => {
     alert("Can't find weather information");
@@ -43,8 +61,8 @@ function getCityCoordinates() {
     }
     return response.json();
     })
-    .then((data) => {
-        if (!data.results) return alert(`No coordinates found for ${cityName}`);
+    .then((geocodingData) => {
+        if (!geocodingData.results) return alert(`No coordinates found for ${cityName}`);
         let { name, latitude, longitude, timezone } = data.results[0];
         getWeather(name, latitude, longitude, timezone);
     })
