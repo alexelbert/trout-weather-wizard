@@ -21,6 +21,10 @@ h1 {
     text-align: center;
 }
 
+h4 {
+    padding-bottom: 5px;
+}
+
 
 .container {
     display: flex;
@@ -132,6 +136,7 @@ and adding some padding for looks */
 .day-info img {
     max-width: 60px;
 }
+
 
 @media screen and (max-width: 425px) {
     .weatherinfo {
