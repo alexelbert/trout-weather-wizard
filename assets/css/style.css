@@ -43,6 +43,7 @@ h1 {
     font-size: 1rem;
     border-radius: 2px;
     border: 1px solid #00241b;
+    border-radius: 5px;
 }
 
 .weatherinfo .seperation {
@@ -71,10 +72,12 @@ h1 {
     border: 1px solid #00241b;
     background: #65b891;
     color: #00241b;
+    border-radius: 5px;
 }
 
 .weatherinfo .location-btn {
     background: #b5ffe1;
+    border-radius: 5px;
 }
 
 .weatherdata {
@@ -89,6 +92,7 @@ and adding some padding for looks */
     background: #b5ffe1;
     color: #00241b;
     padding: 20px 40px 20px 20px;
+    border-radius: 5px;
     
 }
 
@@ -121,6 +125,10 @@ and adding some padding for looks */
     padding: 10px 20px;
 }
 
+.day-info {
+    border-radius: 5px;
+}
+
 .day-info img {
     max-width: 60px;
 }
@@ -144,5 +152,16 @@ and adding some padding for looks */
     .day-info {
         padding: 10px 20px;
         margin: 0 5px 10px 5px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .days {
+        justify-content: center;
+    }
+
+    .currentweather {
+        max-width: 50%;
+        margin-left: 25%;
     }
 }
