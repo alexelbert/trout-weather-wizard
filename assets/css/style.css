@@ -10,6 +10,7 @@
 
 body {
     background: #F5F5F5;
+    font-family: 'Roboto', source sans;
 }
 
 h1 {
@@ -20,14 +21,18 @@ h1 {
     text-align: center;
 }
 
+
 .container {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 30px;
 }
 
 .weatherinfo {
     width: 450px;
+    margin-bottom: 25px;
 }
 
 .weatherinfo input {
@@ -98,13 +103,14 @@ and adding some padding for looks */
 }
 
 .forecast {
-    margin: 20px 0
+    margin: 20px 0;
 }
 
 /* Creating some space between the forecast */
 .days {
     display: flex;
     gap: 15px;
+    margin-top: 25px;
     
 }
 
@@ -113,9 +119,30 @@ and adding some padding for looks */
     background: #65b891;
     list-style: none;
     padding: 10px 20px;
-    width: calc(100% / 4);
 }
 
 .day-info img {
     max-width: 60px;
+}
+
+@media screen and (max-width: 425px) {
+    .weatherinfo {
+        width: 100%;
+    }
+
+    .weatherdata {
+        width: 100%;
+    }
+
+    .days {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .day-info {
+        padding: 10px 20px;
+        margin: 0 5px 10px 5px;
+    }
 }
