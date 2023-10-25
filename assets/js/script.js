@@ -20,7 +20,7 @@ function weatherCard(weatherData, name) {
                                 <h4>Precipitation: ${weatherData.current.precipitation} mm</h4>
                             </div>
                             <div class="icon">
-                                <img src="assets/images/390494_cloud_rain_shine_sun_weather_icon.png" alt="Weather icon">
+                                <img src="assets/images/weather-icon.png" alt="Weather icon">
                             </div>`;
     return currentWeather;
 }
@@ -38,7 +38,7 @@ function forecast(weatherData) {
     for (let i = 0; i < 4; i++) {
         const oneDay = `<li class="day-info">
                             <h2>${dayTitles[i]}</h2>
-                            <img src="assets/images/390494_cloud_rain_shine_sun_weather_icon.png" alt="Weather icon">
+                            <img src="assets/images/weather-icon.png" alt="Weather icon">
                             <h4>Temperature ${weatherData.daily.temperature_2m_min[i]}°C - ${weatherData.daily.temperature_2m_max[i]}°C</h4>
                             <h4>Wind speed: ${weatherData.daily.windspeed_10m_max[i]} km/h</h4>
                             <h4>Wind direction: ${weatherData.daily.winddirection_10m_dominant[i]}°</h4>
@@ -89,8 +89,8 @@ function getWeather(name, latitude, longitude, timezone) {
  * for the weather API
  */
 function getCityCoordinates() {
-    const cityName = cityInput.value.trim(); // Get user input and trim whitespace
-    if (!cityName) return; // Returns nothing if cityName is empty
+    const cityName = cityInput.value.trim();
+    if (!cityName) return;
     const geocodingUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${cityName}&count=1&language=en&format=json`;
 
     fetch(geocodingUrl)
