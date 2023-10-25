@@ -131,6 +131,8 @@ and adding some padding for looks */
 
 .day-info {
     border-radius: 5px;
+    width: 250px;
+    height: 400px;
 }
 
 .day-info img {
@@ -139,6 +141,7 @@ and adding some padding for looks */
 
 
 @media screen and (max-width: 425px) {
+    
     .weatherinfo {
         width: 100%;
     }
@@ -151,12 +154,11 @@ and adding some padding for looks */
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
     }
 
     .day-info {
-        padding: 10px 20px;
-        margin: 0 5px 10px 5px;
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -165,8 +167,12 @@ and adding some padding for looks */
         justify-content: center;
     }
 
+    .day-info {
+        height: 250px;
+    }
+
     .currentweather {
-        max-width: 50%;
-        margin-left: 25%;
+        max-width: 60%;
+        margin-left: 20%;
     }
 }
