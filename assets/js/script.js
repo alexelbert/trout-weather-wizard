@@ -1,6 +1,6 @@
 const cityInput = document.getElementById('city-input');
 const searchButton = document.querySelector('.search-btn');
-const locationButton = document.querySelector('.location-btn')
+const locationButton = document.querySelector('.location-btn');
 const currentWeatherDiv = document.querySelector('.currentweather');
 const forecastDiv = document.querySelector('.days');
 
@@ -34,7 +34,7 @@ function weatherCard(weatherData, name) {
 
 function forecast(weatherData) {
     let forecastDays = '';
-    const dayTitles = ['Two days ago', 'Yesterday', 'Today', 'Tomorrow']
+    const dayTitles = ['Two days ago', 'Yesterday', 'Today', 'Tomorrow'];
     for (let i = 0; i < 4; i++) {
         const oneDay = `<li class="day-info">
                             <h2>${dayTitles[i]}</h2>
@@ -43,8 +43,8 @@ function forecast(weatherData) {
                             <h4>Wind speed: ${weatherData.daily.windspeed_10m_max[i]} km/h</h4>
                             <h4>Wind direction: ${weatherData.daily.winddirection_10m_dominant[i]}°</h4>
                             <h4>Total precipitation: ${weatherData.daily.precipitation_sum[i]} mm</h4>
-                        </li>`
-        forecastDays = forecastDays.concat(oneDay)
+                        </li>`;
+        forecastDays = forecastDays.concat(oneDay);
     }
     
     return forecastDays;
@@ -122,7 +122,7 @@ function getUserCoordinates() {
     navigator.geolocation.getCurrentPosition(function(userCoordinates) {
         const userLatitude = userCoordinates.coords.latitude;
         const userLongitude = userCoordinates.coords.longitude;
-        getWeather('your location', userLatitude, userLongitude, 'auto')
+        getWeather('your location', userLatitude, userLongitude, 'auto');
     });
 }
 
@@ -139,5 +139,5 @@ cityInput.addEventListener('keydown', function(event) {
         getCityCoordinates();
         cityInput.value = '';
     }
-})
+});
 
