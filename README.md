@@ -166,3 +166,95 @@ But what's even more convenient is the option to check the weather for your curr
 
 4. **As a recurring or first-time visitor, I want the essential information available just a few clicks away.**
 To access current weather information or a 4 day forecast, you're just one click away form the details you seek. The design of the layout is made to minimize unnecessary clicks to make the users journey to the weather information as straightforward as possible whether you are a first-time visitor or a recurring one. 
+
+## PageSpeed Insights
+
+I used PageSpeed Insights to assess my website performance. First run i got a performance score of 99 on desktop and 92 for mobile. Very happy with this result
+
+![Preformance](assets/images/speedpref.png)
+
+## HTML and CSS Validation
+
+I checked my code against validators at several point throughout the project. Managed to not get a lot of warnings and errors.
+
+![HTML Validation](assets/images/htmlvalid.png)
+![CSS Validation](assets/images/cssvalid.png)
+
+
+## JsHint
+
+I checked my JavaScript code several times throughout the project and got several issues that needed fixing. Had to change a lot of variables from "let" to "const" since it's considered better practise in today's standards. Was also missing semicolons in a lot of places.
+
+![JsHint](assets/images/jshint.png)
+
+## Known bugs and fixes
+
+While testing the website throughout the project I fixed several errors in my Javascript code with help from the developer tool while testing functions that had to be altered or formulated differently. One problem that i had was that there was no return string available from the API i was using for the using the users current location. Solved it by just referring the name of the location as "your" location since there was no return for name, only latitude and longitude.    
+
+![geolocation fix](assets/images/geolocationfix.png)
+
+While testing the responsiveness of the website I noticed that there is a small window in between screen sizes that makes the website appear skewed. The website still runs like intended but looks off. This is a bug that remains, since it's in between screen sizes.
+
+![responsive bug](assets/images/testingresponsiveness.png)
+
+
+## Deployment
+
+I deployed this website at the beginning of the project using GitHub with these following steps:
+
+*Page deployment*
+
+1. Log in to Github
+2. In my repositories, select the project you wish to deploy
+3. In the menu at the top of the screen, click on 'Settings'
+4. Click on 'Pages' on the menu on the left side of the screen
+5. In the 'Branch' section and select 'main' and click on 'Save'
+6. Now your page has been given a URL which is displayed at the top of your Github Pages 
+
+![Github Deployment](assets/images/deploymentgithub.png)
+
+*Forking the GitHub Repository*
+
+If you want to make any changes to your project without affecting it you can make a copy by "forking" this ensures that your original repository remains unchanged.
+
+1. Find the repository on Github
+2. In the top right corner you can click on the Fork button
+3. The repository has now been "Forked" and you now have a copy that you could work on
+
+*Cloning the Github Repository*
+
+Cloning your repository allows you to download a local version of the repository to work on, very useful to backup your work.
+
+1. Navigate to the repository
+2. Press the "Code" button
+3. Select the "Local" tab in the dropdown menu
+4. Copy the HTTPS link provided
+5. Type "git clone" and paste your link
+6. Press enter and you will now have a local clone of your repository
+
+
+
+
+## Credits
+
+Producing this website i have used several resources for inspiration and researched for help.
+
+The following websites was used for inspiration and research:
+- [Yr](https://www.yr.no/)
+- [API](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Acho](https://acho.io/blogs/how-to-pull-data-from-an-api)
+- [YouTube](https://www.youtube.com/@CodingNepal)
+- [Code Institue](https://alexelbert.github.io/love-maths/)
+
+Used code from these resources, credited as comments code:
+
+-[YouTube](https://www.youtube.com/@CodingNepal)
+
+
+Other websites i used for the content:
+
+- Credited in the HTML and CSS code is from [Youtube](https://www.youtube.com/watch?v=SeXg3AX82ig) and was highly used for that content. The Javascript code is what took the most focus of the project and written in my own way inspired from named sources and research.
+
+## Acknowledgements
+
+I want to thank my mentor Harry Dhillon for giving support through the project and my girlfriend Sabrina Fonseca Pereira for her support and feedback.
